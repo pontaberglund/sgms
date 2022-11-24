@@ -245,5 +245,3 @@ insert into current_skill(instrument_id, skill_level_id, student_id) values
 ((SELECT id FROM student_instrument WHERE instrument='Flöjt'), (SELECT id FROM student_skill_level WHERE skill_level='advanced'), (SELECT id FROM student WHERE first_name='William')),
 ((SELECT id FROM student_instrument WHERE instrument='Trumpet'), (SELECT id FROM student_skill_level WHERE skill_level='advanced'), (SELECT id FROM student WHERE first_name='Hugo'));
 
-/* Declare FK constraints!!!!!!!*/
-
