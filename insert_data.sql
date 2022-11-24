@@ -212,14 +212,13 @@ insert into group_lesson(instrument_id, number_of_places, instructor_id, time_sl
 );
 
 /*Insert one ensemble*/
-insert into ensemble(genre_id, number_of_places, instructor_id, time_slot_id, lesson_price_id, skill_level_id) values
+insert into ensemble(genre_id, number_of_places, instructor_id, time_slot_id, lesson_price_id) values
 (
     (SELECT id FROM genre WHERE genre='Rock'),
     4,
     (SELECT id FROM instructor WHERE first_name='Terry'),
     (SELECT id FROM time_slot WHERE start_time='15:00:00'),
-    (SELECT id FROM lesson_price WHERE skill_level='intermediate' AND type='ensemble'),
-    (SELECT id FROM skill_level WHERE skill_level='intermediate')
+    (SELECT id FROM lesson_price WHERE skill_level='intermediate' AND type='ensemble')
 );
 
 /*Generate 4 different instructor availability*/
